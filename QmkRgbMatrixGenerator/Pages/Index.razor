@@ -1,7 +1,26 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<h1>QMK RGB Matrix Generator</h1>
 
-Welcome to your new app.
+<h4><span class="oi oi-circle-check" /> このプログラムについて</h4>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<p class="ml-md-4">
+    QMK の RGB Matrix の作成を助けるツールです<br />
+    RGB Matrix についての詳細については <a href="https://docs.qmk.fm/#/feature_rgb_matrix" target="_blank">公式ドキュメント <span class="oi oi-external-link" /></a> をご覧ください
+</p>
+
+<h4><span class="oi oi-circle-check" /> 使い方</h4>
+
+<p class="ml-md-4">
+    <ol>
+        <li>
+            <a href="http://www.keyboard-layout-editor.com/">Keyboard Layout Editor <span class="oi oi-external-link" /></a> でレイアウトをつくる
+        </li>
+        <li>
+            このプログラムに読み込ませ、 RGB Matrix の定義を作成する
+        </li>
+        <li>
+            <code>keyboard.c</code> にコピペする
+        </li>
+    </ol>
+</p>

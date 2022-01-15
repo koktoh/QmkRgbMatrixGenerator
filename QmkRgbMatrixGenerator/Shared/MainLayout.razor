@@ -6,10 +6,25 @@
 
 <div class="main">
     <div class="top-row px-4">
-        <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
+        <a href="https://docs.qmk.fm/#/" target="_blank" class="ml-md-3">QMK ドキュメント <span class="oi oi-external-link" /></a>
+        <a href="http://www.keyboard-layout-editor.com/" target="_blank" class="ml-md-3">Keyboard Layout Editor <span class="oi oi-external-link" /></a>
+        <a href="https://github.com/koktoh/QmkRgbMatrixGenerator" target="_blank" class="ml-md-3">GitHub <span class="oi oi-external-link" /></a>
+        <span style="color:#333; font-size:11px;" class="ml-md-3">Ver. @Version</span>
     </div>
 
     <div class="content px-4">
         @Body
     </div>
 </div>
+
+@code {
+    private string Version => this.GetVersion();
+
+    private string GetVersion()
+    {
+        var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+        var version = assembly.GetName().Version;
+
+        return $"{version.Major}.{version.Minor}.{version.Build}";
+    }
+}
